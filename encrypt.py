@@ -6,6 +6,8 @@ def encrypt(text, s):
 
 		if (char.isupper()):
 			result += chr((ord(char) + s-65) % 26 + 65)
+		elif (char.isspace() == True):
+			result += chr(ord(" "))
 		else:
 			result += chr((ord(char) + s-97) % 26 + 97)
 	print("", end='')

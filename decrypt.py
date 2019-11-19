@@ -6,6 +6,8 @@ def decrypt(text, s):
 
 		if (char.isupper()):
 			result += chr((ord(char) + 65-s) % 26 + 65)
+		elif (char.isspace() == True):
+			result += chr(ord(" "))
 		else:
 			result += chr((ord(char) + 97-s) % 26 + 97)
 	print("", end='')
